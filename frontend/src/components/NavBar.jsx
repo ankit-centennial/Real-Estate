@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
-
+import { Link } from "react-router-dom";
 
 const NavBar = () =>{
   const [isMenuOpen,isSetMenuOpen] = useState(false)
@@ -38,7 +38,11 @@ const NavBar = () =>{
     <li><span className="p-4">AVAILABILITY</span></li>
     <li><span className="p-4">GALLERY</span></li>
     <li><span className="p-4">TOURS</span></li>
-    <li><span className="p-4">AMENITIES</span></li>
+
+    <li><span className="p-4">
+     <Link to="/amenities"> AMENITIES </Link>
+      </span></li>
+
     <li><span className="p-4">NEIGHBORHOOD</span></li>
     <li><span className="p-4">PET-FRIENDLY</span></li>
     <li><span className="p-4">SOCIAL</span></li>

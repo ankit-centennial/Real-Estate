@@ -2,6 +2,7 @@ import swimmingPoolImg from "../assets/swimming_pool_img.jpg"
 import gymImg from "../assets/gym_img.jpg"
 import petAnimalsImg from "../assets/pet_img.jpg"
 import ColorDivider from "./ColorDivider"
+import AmenitiesImageSection from "./AmenitiesImageSection"
 const AmenitiesSection = () =>{
 
   const lists = ["Great Location - Minutes to Scott's Addition and The Fan/Carytown",
@@ -26,6 +27,7 @@ const AmenitiesSection = () =>{
 
   return(
     <>
+    <AmenitiesImageSection></AmenitiesImageSection>
     <section className="flex flex-col flex-wrap pb-20 w-screen px-20">
       <div className="flex w-full justify-around py-14 text-2xl">
         <button>
