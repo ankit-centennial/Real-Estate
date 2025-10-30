@@ -6,9 +6,9 @@ import IntroSection from "../components/IntroSection";
 import FloorSection from "../components/FloorSection";
 import GalleryHeadingSectionImage from "../components/GalleryHeadingSectionImage";
 import GallerySection from "../components/GallerySection";
-import NeighborhoodImageHeadingSection from "../components/NeighborhoodImageHeadingSection";
 import NeighborhoodSection from "../components/NeighborhoodSection";
 import SocialSection from "../components/SocialSection";
+import AboutSection from "../components/AboutSection";
 const AppRoute = () =>{
   return(
 <Routes>
@@ -21,7 +21,6 @@ const AppRoute = () =>{
     <FloorSection />
     <GalleryHeadingSectionImage />
     <GallerySection />
-    <NeighborhoodImageHeadingSection />
     <NeighborhoodSection />
    <SocialSection />
     </>
@@ -33,7 +32,15 @@ const AppRoute = () =>{
     <SocialSection/>
     </>
     }></Route>
-    
+
+    <Route path="/about" element={
+      <>
+      <AboutSection/>
+      </>
+    }></Route>
+
+    <Route path="/neighborhood" element={<NeighborhoodSection/>}></Route>
+
   </Route>
 </Routes>
   )

@@ -1,11 +1,14 @@
 import diningImg from "../assets/dining_img.jpg"
 import shoppingImg from "../assets/shopping_img.jpg"
- import entertainmentImg from "../assets/entertainment _img.jpg"
+import entertainmentImg from "../assets/entertainment _img.jpg"
 import communityImg from "../assets/community_img.jpg"
+import NeighborhoodImageHeadingSection from "./NeighborhoodImageHeadingSection"
 
 const NeighborhoodSection = () =>{
   const images = [diningImg,shoppingImg,entertainmentImg,communityImg]
   return(
+    <>
+    <NeighborhoodImageHeadingSection />
     <section className="px-16 h-full flex py-20 items-center">
      <div className="w-full flex flex-col h-full justify-between gap-6  px-6">
       <h2 className="uppercase text-4xl font-light font-serif tracking-[0.2em] text-[#244444]">
@@ -35,6 +38,7 @@ const NeighborhoodSection = () =>{
       ))}
      </div>
     </section>
+    </>
   )
 }
 export default NeighborhoodSection

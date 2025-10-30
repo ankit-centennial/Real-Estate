@@ -16,7 +16,7 @@ const NavBar = () =>{
 
   return (
     <div className="">
-<nav className={`flex justify-between py-4 px-4 md:px-12 lg:px-16 w-screen  pt-20 `}>
+<nav className={`flex justify-between py-4 px-4 md:px-12 lg:px-16 w-screen  pt-20  z-40 fixed top-0 bg-white `}>
   <button className="flex items-center  gap-1 "
   onClick={()=>isSetMenuOpen(!isMenuOpen)}
   > 
@@ -32,18 +32,25 @@ const NavBar = () =>{
   </div>
 </nav>
 
-<nav className={` bg-white/90 py-16 fixed  ${isMenuOpen ? "translate-x-0 h-screen  w-full z-40" : "-translate-x-full hidden " } transition-transform -duration-300 overflow-scroll  backdrop-blur-[1px]`}>
-  <ul className="px-12 flex flex-col justify-between h-full text-md font-light gap-12">
-    <li><span className="p-4">ABOUT</span></li>
+<nav className={` bg-white/90 py-20 mb-10 fixed   left-0 top-[90px] ${isMenuOpen ? "translate-x-0  w-full z-39" : "-translate-x-full hidden " } transition-transform -duration-300 overflow-y-auto h-[calc(100vh-95px)]  backdrop-blur-[1px]`}>
+
+  <ul className="px-12 flex flex-col justify-between h-full text-md font-light gap-8 mb-10">
+    <li><span className="p-4">
+    <Link to="/about">ABOUT</Link>  
+      </span>
+      </li>
     <li><span className="p-4">AVAILABILITY</span></li>
     <li><span className="p-4">GALLERY</span></li>
     <li><span className="p-4">TOURS</span></li>
 
     <li><span className="p-4">
      <Link to="/amenities"> AMENITIES </Link>
-      </span></li>
+      </span>
+      </li>
 
-    <li><span className="p-4">NEIGHBORHOOD</span></li>
+    <li><span className="p-4">
+     <Link to="/neighborhood">NEIGHBORHOOD</Link> 
+      </span></li>
     <li><span className="p-4">PET-FRIENDLY</span></li>
     <li><span className="p-4">SOCIAL</span></li>
     <li><span className="p-4">REVIEWS</span></li>
