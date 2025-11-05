@@ -28,8 +28,8 @@ const AmenitiesSection = () =>{
   return(
     <>
     <AmenitiesImageSection></AmenitiesImageSection>
-    <section className="flex flex-col flex-wrap pb-20 w-screen px-20">
-      <div className="flex w-full justify-around py-14 text-2xl">
+    <section className="flex flex-col  pb-20 w-full px-6 sm:px-10 lg:px-20">
+      <div className="flex flex-wrap justify-center lg:justify-around gap-4 py-10 text-xl sm:text-2xl ">
         <button>
         <span className="uppercase">community amenities</span>
         </button>
@@ -39,25 +39,24 @@ const AmenitiesSection = () =>{
         </button>
       </div>
 
-      <div className="flex h-full w-155  ">
-        <div className=" flex flex-col justify-around items-center flex-wrap pr-4">
-          <h2 className="uppercase text-5xl py-6 text-[#244444]">Everything you need, All right here</h2>
-          <p className="text-lg font-md font-light ">Our amenities are designed to redefine upscale living, offering everything you want and more right at your fingertips:</p>
-          <ul className="list-disc text-lg list-inside py-8">
+      <div className="flex flex-col lg:flex-row   gap-10 ">
+        <div className=" flex flex-col justify-center items-center lg:items-start text-center lg:text-start lg:w-1/3 lg:mr-12">
+          <h2 className="uppercase text-3xl sm:text-4xl lg:text-5xl py-4 text-[#244444]">Everything you need, All right here</h2>
+          <p className="text-base sm:text-lg font-light leading-relaxed max-w-xl">Our amenities are designed to redefine upscale living, offering everything you want and more right at your fingertips:</p>
+          <ul className="list-disc text-base sm:text-lg list-inside py-6 space-y-2 flex-wrap">
             {lists.map(list =>(
               <li>{list}</li>
             ))}
           </ul>
-          <button className="uppercase bg-[#244444] w-70 mt-10 mr-20 py-4 text-white font-light font-serif tracking-[0.2em]">live it up</button>
+          <button className="uppercase bg-[#244444] hover:bg-[#2c5b5b] transition w-48 sm:w-56 mt-6 py-3 text-white font-light font-serif tracking-[0.2em]  shadow-md">live it up</button>
         </div>
 
-        <div className="pt-8 w-150 ml-4">
-        <div className="flex gap-4 ">
-          <img src={swimmingPoolImg} alt="" className="h-100"/>
-          <img src={gymImg} alt="" className="h-100"/>
-          <img src={petAnimalsImg} alt="" className="h-100"/>
+       
+        <div className="flex flex-wrap md:flex-nowrap justify-center  gap-4 lg:w-1/2">
+          <img src={swimmingPoolImg} alt="" className="w-64 sm:w-72 lg:w-56 h-auto lg:h-100 shadow-md object-cover"/>
+          <img src={gymImg} alt="" className="w-64 sm:w-72 lg:w-56 h-auto lg:h-100 shadow-md object-cover"/>
+          <img src={petAnimalsImg} alt="" className="w-64 sm:w-72 lg:w-56 h-auto lg:h-100 shadow-md object-cover"/>
         </div>
-      </div>
       </div>
     </section>
     <ColorDivider></ColorDivider>

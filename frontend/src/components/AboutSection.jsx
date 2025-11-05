@@ -1,7 +1,7 @@
 import Image from "../assets/about_sec_img.jpg"
 const AboutSection = () =>{
   return(
-    <section>
+    <section className="mt-50">
     <div className="relative">
       <img src={Image} alt="" className="h-100 w-full"/>
        <h2 className="absolute flex inset-0 items-center justify-center text-5xl uppercase text-white font-light font-serif tracking-[0.2em]">

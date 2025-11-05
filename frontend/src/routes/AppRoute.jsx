@@ -9,6 +9,7 @@ import GallerySection from "../components/GallerySection";
 import NeighborhoodSection from "../components/NeighborhoodSection";
 import SocialSection from "../components/SocialSection";
 import AboutSection from "../components/AboutSection";
+import ContactSection from "../components/ContactSection";
 const AppRoute = () =>{
   return(
 <Routes>
@@ -40,6 +41,7 @@ const AppRoute = () =>{
     }></Route>
 
     <Route path="/neighborhood" element={<NeighborhoodSection/>}></Route>
+     <Route path="/contact" element={<ContactSection/>}></Route>
 
   </Route>
 </Routes>
