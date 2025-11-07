@@ -1,10 +1,13 @@
 import SocialImg from "../assets/social_sec_img.jpg"
 import { CgFacebook } from "react-icons/cg";
 import { FaInstagram } from "react-icons/fa";
+import ReCAPTCHA from "react-google-recaptcha";
+
 const SocialSection = () =>{
+  const captchaSiteKey = import.meta.env.VITE_CAPTCHA_SITE_KEY
   return(
     <>
-    <section className="relative w-full">
+    <section className="relative w-full ">
   
   <div className="absolute inset-0">
     <img
@@ -30,31 +33,31 @@ const SocialSection = () =>{
       Designed to Elevate Your Life in Richmond.
     </h2>
 
-    <form className="w-full    p-6 sm:p-8 ">
-      <div className=" flex flex-wrap gap-4">
+    <form className="w-full flex flex-col gap-4 sm:p-8 ">
+      <div className=" flex flex-wrap w-full gap-3 lg:gap-0 justify-center">
         <input
           type="text"
           placeholder="First Name"
-          className="bg-white p-4  focus:outline-none focus:ring-2 focus:ring-[#244444]"
+          className="bg-white py-4 px-8 border-r-1"
         />
         <input
           type="text"
           placeholder="Last Name"
-          className="bg-white p-4  focus:outline-none focus:ring-2 focus:ring-[#244444]"
+          className="bg-white py-4 px-8 border-r-1"
         />
         <input
           type="email"
           placeholder="Email"
-          className="bg-white p-4  focus:outline-none focus:ring-2 focus:ring-[#244444]"
+          className="bg-white py-4 px-8 border-r-1"
         />
         <input
           type="tel"
           placeholder="Phone Number"
-          className="bg-white p-4  focus:outline-none focus:ring-2 focus:ring-[#244444]"
+          className="bg-white py-4 px-8 border-r-1"
         />
       </div>
 
-      <div className="flex flex-col sm:flex-row items-center justify-center sm:justify-start gap-2 mt-6 lg:justify-center">
+      <div className="flex flex-col sm:flex-row items-center justify-center  gap-2  lg:justify-center">
         <input type="checkbox" className="scale-110 accent-[#244444]" />
         <p className="text-white text-sm sm:text-base">
           By submitting this form, you agree to the{" "}
@@ -64,7 +67,13 @@ const SocialSection = () =>{
         </p>
       </div>
 
-      <div className="flex justify-center lg:justify-center sm:justify-start mt-8">
+      <div className="w-full flex justify-center">
+       <ReCAPTCHA
+       sitekey={captchaSiteKey}
+      />,
+      </div>
+
+      <div className="flex justify-center lg:justify-center  ">
         <button className="px-6 py-3 bg-amber-950 transition text-white text-lg font-light font-serif border-2 border-green-900">
           Send
         </button>
