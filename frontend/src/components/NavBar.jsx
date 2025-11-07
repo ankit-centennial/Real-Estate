@@ -37,7 +37,7 @@ useEffect(() => {
   </div>
 </nav>
 
-<nav className={` bg-white/90 py-20 mb-10 fixed   left-0 top-[90px] ${isMenuOpen ? "translate-x-0  w-full z-39" : "-translate-x-full hidden " } transition-transform -duration-300 overflow-y-auto h-[calc(100vh-90px)]  backdrop-blur-[1px]`}>
+<nav className={` bg-white/90 py-20 mb-10 fixed   left-0 top-[90px] ${isMenuOpen ? "translate-x-0  w-full z-39" : "-translate-x-full  opacity-0 scale-95" } transition-all ${isMenuOpen ? "duration-700" : "duration-0"} ease-in-out overflow-y-auto h-[calc(100vh-90px)]  backdrop-blur-[1px]`}>
 
   <ul className="px-12 flex flex-col justify-between h-full text-md font-light gap-8 mb-10">
     <li><span className="p-4">
