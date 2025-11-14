@@ -32,8 +32,8 @@ useEffect(() => {
 
   </button>
   <div className="flex gap-4">
-    <button className="bg-[#244444] md:px-10 md:py-3 px-6 text-white">Book Tour</button>
-    <button className="bg-[#244444] md:px-10 md:py-3 px-6 text-white">Apply Now</button>
+    <button className="bg-[#244444] md:px-10 py-3  px-6 text-white uppercase">Book Tour</button>
+    <button className="bg-[#244444] md:px-10 py-3  px-6 text-white uppercase">Apply Now</button>
   </div>
 </nav>
 
